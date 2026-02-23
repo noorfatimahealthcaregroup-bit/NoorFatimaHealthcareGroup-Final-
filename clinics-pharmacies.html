@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- BASIC META & INFO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinics &amp; Pharmacies | Noor Fatima Healthcare Group</title>
+  <meta name="description" content="Locate Noor Fatima Healthcare clinics and pharmacies near you. Access trusted doctors, medicines, and care all in one place.">
+  <!-- FONTS & ICONS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* RESET & BASE */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; min-height: 100%; overflow-x: hidden; font-size: clamp(14px, 1.2vw, 18px); }
+    body { font-family: 'Poppins', sans-serif; background: #f7fdfc; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    /* SKIP LINK */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #009688;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 1000;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus { top: 10px; }
+    /* FOCUS STYLES */
+    :focus { outline: 3px solid #009688; outline-offset: 3px; }
+    button:focus, a:focus, input:focus, textarea:focus, select:focus {
+      outline: 3px solid #009688;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    header a:focus, footer a:focus, .navbar a:focus { background: rgba(0, 150, 136, 0.15); }
+    button:focus-visible { box-shadow: 0 0 0 4px rgba(0,150,136,0.3); }
+    /* NAVBAR */
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      width: 100%; padding: 1rem 2rem; background: #009688; gap: 1rem;
+      box-sizing: border-box; min-height: 64px;
+    }
+    .navbar .logo { font-size: 1.25rem; font-weight: 700; color: white; line-height: 1; }
+    .navbar nav ul { list-style: none; display: flex; gap: 1.25rem; align-items: center; }
+    .navbar nav ul li a {
+      color: white; font-weight: 500; padding-bottom: .25rem; transition: all .2s; line-height: 1;
+    }
+    .navbar nav ul li a.active,
+    .navbar nav ul li a:hover {
+      font-weight: 600; border-bottom: 2px solid #ffc107;
+    }
+    .menu-toggle {
+      display: none; background: none; border: none; color: white;
+      font-size: 1.5rem; cursor: pointer; padding: 6px; line-height: 1;
+    }
+    /* PAGE SECTION */
+    .section {
+      max-width: 1200px; margin: 3rem auto; padding: 0 1rem;
+    }
+    .section h2 {
+      font-size: 2.5rem; font-weight: 800; color: #00796b;
+      text-align: center; margin-bottom: 1.5rem;
+    }
+    .section p {
+      font-size: 1.15rem; color: #555; text-align: center;
+      margin-bottom: 2rem;
+    }
+    /* SEARCH BAR */
+    .search-bar{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:2.25rem}
+    .search-input-wrap{display:flex;align-items:center;background:#fff;border:1px solid #e6f2ef;padding:6px 10px;border-radius:10px;box-shadow:0 4px 14px rgba(2,6,23,0.04)}
+    .search-input-wrap input{border:0;outline:0;padding:8px 6px;font-size:1rem;min-width:220px;background:transparent}
+    .search-input-wrap .clear-btn{background:transparent;border:0;color:#777;font-size:20px;cursor:pointer;padding:6px;margin-left:6px}
+    #clinicSearchBtn{background:linear-gradient(135deg,#00bfa5,#009688);color:#fff;border-radius:10px;padding:.7rem 1rem;border:0;font-weight:700}
+    #clinicSearchBtn:hover{filter:brightness(.95)}
+    .search-results{font-size:.95rem;color:#44615b}
+    /* CLINIC CARDS */
+    .clinics-list {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+    .store-card {
+      background: white; border-radius: 16px; padding: 1.5rem;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      text-align: center; border-left: 6px solid #009688;
+      transition: all 0.3s ease;
+    }
+    .store-card:hover {
+      transform: translateY(-8px); box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    }
+    .store-card img {
+      width: 100%; height: 220px; object-fit: cover;
+      border-radius: 14px; margin-bottom: 1rem; transition: transform 0.5s ease;
+    }
+    .store-card:hover img { transform: scale(1.05); }
+    .store-card h3 {
+      font-size: 1.5rem; font-weight: 800; color: #00594f; margin-bottom: .8rem;
+    }
+    .store-card p {
+      font-size: 1rem; color: #475657; margin-bottom: .8rem;
+    }
+    .store-card .timings {
+      font-size: .9rem; color: #00796b; font-weight: 600; margin-bottom: 1rem;
+    }
+    /* BADGES & ACTIONS */
+    .badges {
+      display: flex; gap: .6rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap;
+    }
+    .badge {
+      font-size: .8rem; font-weight: 600;
+      background: linear-gradient(135deg, #e0f2f1, #c8fff4);
+      color: #00796b; padding: .35rem .7rem; border-radius: 30px;
+      display: flex; align-items: center; gap: .3rem;
+    }
+    .badge i { font-size: .9rem; }
+    .actions {
+      display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .6rem 1rem; border-radius: 10px;
+      font-weight: 600; font-size: .9rem; transition: .3s ease;
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, #00bfa5, #009688);
+      color: white; box-shadow: 0 6px 16px rgba(0,150,136,0.25);
+    }
+    .btn.primary:hover { transform: translateY(-3px); }
+    .btn.secondary {
+      background: #f9f9f9; color: #00594f; border: 1px solid #ccc;
+    }
+    .btn.secondary:hover { background: #f1f1f1; }
+    /* FOOTER - unified professional site-footer (matches index.html) */
+    .site-footer {
+      background: linear-gradient(180deg,#012e2b 0%, #023835 100%);
+      color: #cfeeea;
+      padding: 48px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .site-footer .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .site-footer .brand { color: #e6fff9; }
+
+    .logo-footer { font-weight: 800; color: #ffffff; font-size: 1.25rem; display: inline-block; margin-bottom: 8px; }
+
+    .site-footer .tagline { color: rgba(230,255,249,0.9); margin-top: 6px; line-height: 1.45; max-width: 380px; font-weight: 500; }
+
+    .site-footer h4 { font-size: 1rem; color: #eafff8; margin-bottom: 12px; font-weight: 700; }
+
+    .site-footer ul { list-style: none; padding: 0; margin: 0; }
+
+    .site-footer li { margin-bottom: 10px; color: rgba(255,255,255,0.85); font-weight: 500; }
+
+    .site-footer a { color: #9ff3e1; text-decoration: none; }
+
+    .site-footer a:hover { color: #ffffff; text-decoration: underline; }
+
+    .site-footer .contact p { margin-bottom: 8px; color: rgba(255,255,255,0.9); }
+
+    .btn-primary { display: inline-block; background: linear-gradient(90deg,#00b39f,#00796b); color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 700; text-decoration: none; box-shadow: 0 6px 22px rgba(0,115,100,0.15); transition: transform 0.12s ease, box-shadow 0.12s ease; }
+
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,115,100,0.18); }
+
+    .social-icons { gap: 10px; display:flex; }
+
+    .social-icons a { width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:8px; background: rgba(255,255,255,0.06); color: #dffbf4; font-size:16px; }
+
+    .social-icons a:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
+
+    .site-footer .footer-legal { text-align:center; color: rgba(255,255,255,0.75); padding-top: 18px; font-weight:600; }
+    @media (max-width: 768px) {
+      .navbar { position: relative; padding: 0.75rem 1rem; }
+      .menu-toggle { display: block; }
+      .navbar nav {
+        position: absolute; top: 100%; left: 0;
+        width: 100%; background: #009688; max-height: 0; overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .navbar nav ul { flex-direction: column; gap: 0; padding: 0; }
+      .navbar nav ul li { border-top: 1px solid rgba(255,255,255,0.2); }
+      .navbar nav ul li a { display: block; padding: 0.75rem 1rem; }
+      .navbar nav.open { max-height: 500px; }
+    }
+    /* Accessibility and small utilities copied from index footer styles */
+    a:focus,
+    button:focus {
+      outline: 2px solid #004d40;
+      outline-offset: 2px;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .contact-icon {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #00b39f;
+      color: #fff;
+      margin-right: 8px;
+      font-size: 14px;
+    }
+    .contact-icon.whatsapp { background: #25D366; }
+    .email-btn {
+      display: inline-block;
+      background: #00796b;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .email-btn:hover { background: #00594f; }
+    /* MOBILE IMPROVEMENTS */
+    img, .hn-card img, .store-card img, .about-media img { max-width:100%; height:auto; display:block; }
+    .container, .section, .health-network, .order-section, .grid, .clinics-list { padding-left:16px; padding-right:16px; box-sizing:border-box; }
+    .grid, .hn-grid, .order-list, .about-grid, .clinics-list { gap:1rem; grid-gap:1rem; }
+    @media (max-width: 900px){
+      .grid, .hn-grid, .order-list, .about-grid, .clinics-list { grid-template-columns: repeat(2,1fr); }
+      .navbar nav ul { gap: .75rem; }
+    }
+    @media (max-width: 600px){
+      .grid, .hn-grid, .order-list, .about-grid, .clinics-list { grid-template-columns: 1fr; }
+      body{font-size:15px}
+      .navbar nav ul{flex-direction:column;align-items:flex-start}
+      .menu-toggle{display:block}
+      .navbar{padding:.75rem 1rem}
+      .logo{font-size:1rem}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="navbar">
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Noor Fatima Healthcare Group Home">Noor Fatima Healthcare Group</a>
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <!-- Primary Navigation -->
+      <nav id="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="order.html">Buy Medicines</a></li>
+          <li><a href="clinics-pharmacies.html" class="active">Clinics &amp; Pharmacies</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <!-- Section -->
+    <section class="section">
+      <h2>Clinics &amp; Pharmacies</h2>
+      <p>Find Noor Fatima Healthcare clinics and pharmacies near you. Access medicines, consultations, and care — all in one place.</p>
+      <!-- Search Bar -->
+      <form id="clinicSearchForm" class="search-bar" role="search" aria-label="Search clinics">
+        <label for="clinicSearch" class="visually-hidden">Search clinics by city, area, or name</label>
+        <div class="search-input-wrap">
+          <i class="fa fa-search" aria-hidden="true" style="color:#00796b;margin-right:8px"></i>
+          <input id="clinicSearch" name="q" type="search" placeholder="Search by city, area, or name..." aria-label="Search clinics by city, area, or name" autocomplete="off">
+          <button type="button" id="clinicClearBtn" class="clear-btn" aria-label="Clear search" hidden>&times;</button>
+        </div>
+        <button id="clinicSearchBtn" type="submit" class="btn primary" aria-label="Search clinics"><i class="fas fa-search" aria-hidden="true"></i> Search</button>
+        <div id="clinicResults" class="search-results" aria-live="polite" style="margin-left:12px;color:#555;font-weight:600"></div>
+      </form>
+      <!-- Cards -->
+      <div id="clinicsList" class="clinics-list">
+        <!-- Pharmacy + Clinic (simplified per request) -->
+        <div class="store-card" data-search="noor fatima medical shop associated healthcare clinic chanduna deh nowabad ganderbal j k">
+          <img src="assets/clinic-noor.jpg" alt="Noor Fatima Medical Shop &amp; Associated Healthcare Clinic" loading="lazy">
+          <h3>Noor Fatima Medical Shop &amp; Associated Healthcare Clinic</h3>
+          <div class="badges">
+            <div class="badge"><i class="fas fa-pills"></i> Pharmacy</div>
+            <div class="badge"><i class="fas fa-clinic-medical"></i> Clinic</div>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="tel:+917051899758" aria-label="Call Noor Fatima Medical Shop"><i class="fas fa-phone" aria-hidden="true"></i> Call Now</a>
+            <a class="btn secondary" target="_blank" rel="noopener noreferrer" href="https://maps.google.com/?q=123+Healthcare+Avenue,+Your+City" aria-label="Get directions to Noor Fatima Medical Shop"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Get Directions</a>
+          </div>
+        </div>
+        <!-- Pharmacy Only (Coming Soon minimal card) -->
+        <div class="store-card" data-search="coming soon">
+          <img src="assets/pharmacy1.jpg" alt="Coming Soon" loading="lazy">
+          <h3>Coming Soon</h3>
+        </div>
+        <!-- Clinic Only (Coming Soon minimal card) -->
+        <div class="store-card" data-search="coming soon">
+          <img src="assets/clinic2.jpg" alt="Coming Soon" loading="lazy">
+          <h3>Coming Soon</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="visually-hidden">Noor Fatima Healthcare Group — Footer</h2>
+    <div class="footer-inner">
+      <div class="brand">
+        <a href="index.html" class="logo-footer">Noor Fatima Healthcare Group</a>
+        <p class="tagline">Compassionate, community-first healthcare across hospitals, clinics, pharmacies &amp; diagnostics.</p>
+        <div class="social-icons" aria-label="Social media links" style="margin-top:14px">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="links" aria-labelledby="services-footer">
+        <h4 id="services-footer">Services</h4>
+        <ul>
+          <li><a href="clinics-pharmacies.html">Clinics &amp; Pharmacies</a></li>
+          <li><a href="order.html">Medicine Delivery</a></li>
+          <!-- blog link removed -->
+        </ul>
+      </div>
+
+      <div class="links" aria-labelledby="company-footer">
+        <h4 id="company-footer">Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <!-- blog link removed -->
+        </ul>
+      </div>
+
+      <div class="contact" aria-labelledby="contact-footer">
+        <h4 id="contact-footer">Get in touch</h4>
+        <p class="address">Corporate Office: 12 Health Street, City</p>
+        <p><span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+917051899758">+91 70518 99758</a></p>
+        <p><span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span><a href="mailto:NoorFatimeHealthcareGroup@gmail.com">info@nfhg.com</a></p>
+        <!-- Contact CTA removed: phone & email present above -->
+      </div>
+    </div>
+
+    <div class="footer-legal">&copy; 2026 Noor Fatima Healthcare Group. All rights reserved.</div>
+  </footer>
+  <!-- SCRIPTS -->
+  <script>
+    (function() {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.getElementById('primary-nav');
+      if (!toggle || !nav) return;
+      const openNav = () => {
+        toggle.setAttribute('aria-expanded', 'true');
+        nav.classList.add('open');
+      };
+      const closeNav = () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('open');
+      };
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        if (expanded) closeNav(); else openNav();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('open')) {
+          closeNav();
+          toggle.focus();
+        }
+      });
+      document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('open')) {
+          closeNav();
+        }
+      });
+    })();
+  </script>
+  <!-- SEARCH FILTER SCRIPT -->
+  <script>
+    (function(){
+      const form = document.getElementById('clinicSearchForm');
+      const input = document.getElementById('clinicSearch');
+      const clearBtn = document.getElementById('clinicClearBtn');
+      const resultsEl = document.getElementById('clinicResults');
+      const clinics = Array.from(document.querySelectorAll('#clinicsList .store-card'));
+
+      function updateResultsCount(count){
+        if(!resultsEl) return;
+        if(count === 0) resultsEl.textContent = 'No results';
+        else resultsEl.textContent = count + (count === 1 ? ' result' : ' results');
+      }
+
+      function filterClinics(){
+        const q = (input.value || '').trim().toLowerCase();
+        let visible = 0;
+        clinics.forEach(card => {
+          const data = (card.getAttribute('data-search') || '') + ' ' + (card.textContent || '');
+          const show = q === '' || data.toLowerCase().includes(q);
+          card.style.display = show ? '' : 'none';
+          if(show) visible++;
+        });
+        updateResultsCount(visible);
+        clearBtn.hidden = q === '';
+      }
+
+      function debounce(fn, wait){
+        let t;
+        return function(...args){ clearTimeout(t); t = setTimeout(()=>fn.apply(this,args), wait); };
+      }
+
+      const debounced = debounce(filterClinics, 180);
+
+      if(input){
+        input.addEventListener('input', debounced);
+        input.addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ e.preventDefault(); filterClinics(); } });
+      }
+
+      if(clearBtn){
+        clearBtn.addEventListener('click', ()=>{ input.value=''; filterClinics(); input.focus(); });
+      }
+
+      if(form){
+        form.addEventListener('submit', (e)=>{ e.preventDefault(); filterClinics(); });
+      }
+
+      // initialize
+      filterClinics();
+    })();
+  </script>
+</body>
+</html>
