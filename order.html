@@ -253,6 +253,14 @@
       .navbar{padding:.75rem 1rem}
       .logo{font-size:1rem}
     }
+
+    @media (max-width: 900px) {
+      .site-footer .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .site-footer .footer-inner { grid-template-columns: 1fr; gap: 18px; }
+    }
   </style>
 </head>
 <body>
