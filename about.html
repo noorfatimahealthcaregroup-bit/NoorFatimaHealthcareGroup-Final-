@@ -162,6 +162,7 @@
       font-weight: 700;
       margin-bottom: 1rem;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      white-space: nowrap;
     }
 
     .hero p {
@@ -256,38 +257,6 @@
 
     .about-image:hover img {
       transform: scale(1.05);
-    }
-
-    /* STATS SECTION */
-    .stats-section {
-      background: linear-gradient(135deg, #009688, #00796b);
-      padding: 60px 16px;
-      color: white;
-    }
-
-    .stats-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .stat-item {
-      padding: 2rem;
-    }
-
-    .stat-number {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 1.2rem;
-      font-weight: 500;
     }
 
     /* VALUES SECTION */
@@ -696,7 +665,7 @@
   <main id="main-content">
     <section class="hero">
       <div class="hero-content">
-        <h1>About Noor Fatima Healthcare Group</h1>
+        <h1>Noor Fatima Healthcare Group</h1>
         <p>Dedicated to providing compassionate, accessible healthcare services to our community, building a healthier future for everyone.</p>
         <a href="#about-section" class="btn">Learn More</a>
       </div>
@@ -718,27 +687,6 @@
           <div class="about-image">
             <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare professionals in action">
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="stats-section">
-      <div class="stats-container">
-        <div class="stat-item">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">Years of Service</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">50K+</span>
-          <span class="stat-label">Patients Served</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">100+</span>
-          <span class="stat-label">Expert Staff</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">24/7</span>
-          <span class="stat-label">Available Support</span>
         </div>
       </div>
     </section>
@@ -767,6 +715,16 @@
             <div class="value-icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></div>
             <h3 class="value-title">Accessibility</h3>
             <p class="value-desc">Making healthcare convenient with online ordering, home delivery, and easy clinic access.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-lock" aria-hidden="true"></i></div>
+            <h3 class="value-title">Safety</h3>
+            <p class="value-desc">Protecting patient wellbeing through strict hygiene, secure processes, and trusted care pathways.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
+            <h3 class="value-title">Innovation</h3>
+            <p class="value-desc">Continuously improving services with new technology, faster delivery, and smarter patient support.</p>
           </div>
         </div>
       </div>
@@ -887,6 +845,8 @@
       e.preventDefault();
       document.querySelector('#about-section').scrollIntoView({ behavior: 'smooth' });
     });
+
+    // Stats count-up animation
   </script>
 </body>
 
