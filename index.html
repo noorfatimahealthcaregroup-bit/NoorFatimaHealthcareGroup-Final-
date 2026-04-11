@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noor Fatima Healthcare Group</title>
-  <meta name="description" content="Noor Fatima Healthcare Group – Comprehensive, community-based healthcare across hospitals, clinics, pharmacies, and diagnostics with doorstep delivery." />
+  <meta name="description" content="Noor Fatima Healthcare Group – Comprehensive, community-based healthcare across clinics and pharmacies with doorstep delivery." />
   <meta name="author" content="Noor Fatima Healthcare Group" />
   <meta name="robots" content="index, follow" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -16,10 +16,10 @@
   <meta property="og:site_name" content="Noor Fatima Healthcare Group" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Noor Fatima Healthcare Group" />
-  <meta property="og:description" content="Comprehensive, community-based healthcare across hospitals, clinics, pharmacies, and diagnostics with doorstep delivery." />
+  <meta property="og:description" content="Comprehensive, community-based healthcare across clinics and pharmacies with doorstep delivery." />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Noor Fatima Healthcare Group" />
-  <meta name="twitter:description" content="Comprehensive, community-based healthcare across hospitals, clinics, pharmacies, and diagnostics with doorstep delivery." />
+  <meta name="twitter:description" content="Comprehensive, community-based healthcare across clinics and pharmacies with doorstep delivery." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- Unified Font Weights -->
@@ -158,64 +158,75 @@
     }
 
     .hn-card {
-      background: #fff;
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-      transition: transform .28s ease, box-shadow .28s ease;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      min-height: 160px;
+      align-items: center;
+      text-align: center;
+      min-height: 200px;
+      border: 1px solid #e0e0e0;
     }
 
     .hn-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
 
     .hn-icon {
-      background: #e6fffb;
+      background: #f5f5f5;
       color: #009688;
-      width: 56px;
-      height: 56px;
-      display: inline-grid;
-      place-items: center;
-      border-radius: 10px;
-      font-size: 20px;
-      margin-bottom: 12px;
+      width: 60px;
+      height: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 24px;
+      margin-bottom: 16px;
     }
 
     .hn-title {
-      color: #00594f;
-      font-size: 1.05rem;
-      font-weight: 700;
+      color: #333333;
+      font-size: 1.2rem;
+      font-weight: 600;
       margin-bottom: 8px;
+      line-height: 1.3;
+      text-align: center;
     }
 
     .hn-desc {
-      color: #475657;
-      font-size: 0.98rem;
-      line-height: 1.45;
+      color: #666666;
+      font-size: 0.9rem;
+      line-height: 1.5;
       margin-top: auto;
+      flex-grow: 1;
+      text-align: center;
+      max-width: 250px;
     }
 
     .hn-cta {
-      margin-top: 14px;
+      margin-top: 16px;
       display: inline-flex;
       gap: 0.5rem;
       align-items: center;
-      color: #00796b;
-      font-weight: 700;
-      transition: color 0.3s ease;
-    }
-
-    .hn-cta i {
-      transition: transform 0.3s ease;
+      color: #009688;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid #009688;
+      background: transparent;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
     .hn-cta:hover {
-      color: #00594f;
+      background: #009688;
+      color: #ffffff;
     }
 
     .hn-cta:hover i {
@@ -470,13 +481,13 @@
     <section class="health-network" aria-labelledby="hn-title">
       <div class="container">
         <h2 id="hn-title">Our Health Network</h2>
-        <p class="sub">Comprehensive healthcare across hospitals, clinics, pharmacies, diagnostics and community programs — built to serve every stage of life. (Click any card to learn more.)</p>
+        <p class="sub">Comprehensive healthcare across clinics and pharmacies — built to serve every stage of life. (Click any card to learn more.)</p>
         <div class="hn-grid" role="list">
           <!-- Merged Clinics & Pharmacies -->
           <article class="hn-card" role="listitem" tabindex="0" aria-labelledby="hn2">
             <div class="hn-icon"><i class="fas fa-clinic-medical" aria-hidden="true"></i></div>
             <h3 id="hn2" class="hn-title">Clinics &amp; Pharmacies</h3>
-            <p class="hn-desc">Community clinics and trusted pharmacies providing consultations, medicines, OTC essentials and family health services close to you.</p>
+            <p class="hn-desc">State-of-the-art clinics and fully stocked pharmacies offering personalized care, expert consultations, and essential medicines right in your neighborhood.</p>
             <a class="hn-cta" href="clinics-pharmacies.html">Explore <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
           </article>
 
@@ -484,24 +495,8 @@
           <article class="hn-card" role="listitem" tabindex="0" aria-labelledby="hn3">
             <div class="hn-icon"><i class="fas fa-truck-medical" aria-hidden="true"></i></div>
             <h3 id="hn3" class="hn-title">Online Medicine Delivery</h3>
-            <p class="hn-desc">Fast, reliable doorstep delivery — upload prescriptions or message us on WhatsApp to place an order.</p>
+            <p class="hn-desc">Swift and secure doorstep delivery of prescribed medicines. Upload your prescription or order via WhatsApp for fast, reliable service.</p>
             <a class="hn-cta" href="order.html">Order now <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="hn-card" role="listitem" tabindex="0" aria-labelledby="hn4">
-            <div class="hn-icon"><i class="fas fa-vials" aria-hidden="true"></i></div>
-            <h3 id="hn4" class="hn-title">Diagnostics &amp; Labs</h3>
-            <p class="hn-desc">Accurate lab testing and diagnostic imaging with fast turnaround times and digital reports.</p>
-            <a class="hn-cta" href="#">Book a test <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-          </article>
-
-          <!-- Card 6 -->
-          <article class="hn-card" role="listitem" tabindex="0" aria-labelledby="hn6">
-            <div class="hn-icon"><i class="fas fa-hands-helping" aria-hidden="true"></i></div>
-            <h3 id="hn6" class="hn-title">Community Initiatives</h3>
-            <p class="hn-desc">Free health camps, awareness drives and outreach programs that bring care to underserved areas.</p>
-            <a class="hn-cta" href="#">See initiatives <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
           </article>
         </div>
       </div>
@@ -513,13 +508,13 @@
     <div class="footer-inner">
       <div class="brand">
         <a href="index.html" class="logo-footer">Noor Fatima Healthcare Group</a>
-        <p class="tagline">Compassionate, community-first healthcare with clinics, pharmacies, diagnostics, and doorstep delivery.</p>
+        <p class="tagline">Compassionate, community-first healthcare with clinics, pharmacies, and doorstep delivery.</p>
         <div class="social-icons" aria-label="Social media links" style="margin-top:14px">
           <a href="javascript:void(0)" onclick="alert('Our Facebook page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="javascript:void(0)" onclick="alert('Our Instagram page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/noorfatimahealthcaregroup/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
           <a href="javascript:void(0)" onclick="alert('Our Twitter page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
           <a href="javascript:void(0)" onclick="alert('Our LinkedIn page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-          <a href="https://youtube.com/@noorfatimahealthcaregroup?si=ordo8-Q2yGr6rbJu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://youtube.com/@noorfatimahealthcaregroup?si=rzRmfsHa4p1ULpsi" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -543,7 +538,7 @@
         <h4 id="contact-footer">Get in touch</h4>
         <p class="address">Corporate Office: Chanduna Deh Nowabad, Ganderbal - 191131, Jammu &amp; Kashmir, India</p>
         <p><span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+917051899758">+91 70518 99758</a></p>
-        <p><span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span><a href="mailto:NoorFatimeHealthcareGroup@gmail.com">info@nfhg.com</a></p>
+        <p><span class="contact-icon whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></span><a href="https://wa.me/917051899758">+91 70518 99758</a></p>
         <!-- Contact CTA removed: phone & email present above -->
       </div>
     </div>

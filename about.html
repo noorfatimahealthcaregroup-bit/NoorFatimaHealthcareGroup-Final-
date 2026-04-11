@@ -5,24 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Noor Fatima Healthcare Group</title>
-  <meta name="description" content="Learn about Noor Fatima Healthcare Group – our mission, vision, and commitment to community-based healthcare services." />
+  <title>Error | Noor Fatima Healthcare Group</title>
+  <meta name="description" content="An error occurred. Please try again or contact support." />
   <meta name="author" content="Noor Fatima Healthcare Group" />
-  <meta name="robots" content="index, follow" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#009688" />
-  <link rel="canonical" href="https://noorfatimahg.com/about.html" />
-  <meta property="og:url" content="https://noorfatimahg.com/about.html" />
-  <meta property="og:site_name" content="Noor Fatima Healthcare Group" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="About Us | Noor Fatima Healthcare Group" />
-  <meta property="og:description" content="Learn about Noor Fatima Healthcare Group – our mission, vision, and commitment to community-based healthcare services." />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="About Us | Noor Fatima Healthcare Group" />
-  <meta name="twitter:description" content="Learn about Noor Fatima Healthcare Group – our mission, vision, and commitment to community-based healthcare services." />
+  <link rel="canonical" href="https://noorfatimahg.com/error.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Unified Font Weights -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -128,54 +118,45 @@
       line-height: 1;
     }
 
-    /* HERO SECTION */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(135deg, rgba(0, 150, 136, 0.8), rgba(0, 121, 107, 0.8)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+    /* ERROR SECTION */
+    .error-section {
+      padding: 120px 2rem 80px;
+      background: #fff;
+      text-align: center;
+      min-height: calc(100vh - 200px);
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      padding: 0 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
+    .error-content h1 {
+      font-size: 6rem;
       font-weight: 700;
+      color: #009688;
       margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-      white-space: nowrap;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
 
-    .hero p {
-      font-size: 1.5rem;
-      font-weight: 300;
+    .error-content h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #00796b;
+      margin-bottom: 1rem;
+    }
+
+    .error-content p {
+      font-size: 1.2rem;
+      color: #666;
       margin-bottom: 2rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .hero .btn {
+    .error-content .btn {
       display: inline-block;
-      background: #ffc107;
-      color: #333;
+      background: #009688;
+      color: white;
       padding: 1rem 2rem;
       border-radius: 50px;
       font-weight: 600;
@@ -185,249 +166,12 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    .hero .btn:hover {
+    .error-content .btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
 
-    /* ABOUT SECTION */
-    .about-section {
-      padding: 80px 16px;
-      background: #fff;
-    }
-
-    .about-section .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .about-section h2 {
-      text-align: center;
-      color: #00796b;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .about-section .sub {
-      text-align: center;
-      color: #41645f;
-      max-width: 860px;
-      margin: 0 auto 4rem;
-      font-weight: 500;
-      line-height: 1.5;
-      font-size: 1.2rem;
-    }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      margin-bottom: 4rem;
-      align-items: center;
-    }
-
-    .about-text h3 {
-      color: #00594f;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .about-text p {
-      color: #475657;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-    }
-
-    .about-image {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      position: relative;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .about-image:hover img {
-      transform: scale(1.05);
-    }
-
-    /* VALUES SECTION */
-    .values-section {
-      padding: 80px 16px;
-      background: #f7fdfc;
-    }
-
-    .values-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .values-section h2 {
-      text-align: center;
-      color: #00796b;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .values-section .sub {
-      text-align: center;
-      color: #41645f;
-      max-width: 860px;
-      margin: 0 auto 4rem;
-      font-weight: 500;
-      line-height: 1.5;
-      font-size: 1.2rem;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .value-card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .value-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #009688, #ffc107);
-    }
-
-    .value-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .value-icon {
-      background: linear-gradient(135deg, #e6fffb, #b2dfdb);
-      color: #009688;
-      width: 80px;
-      height: 80px;
-      display: inline-grid;
-      place-items: center;
-      border-radius: 50%;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0, 150, 136, 0.2);
-    }
-
-    .value-title {
-      color: #00594f;
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .value-desc {
-      color: #475657;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    /* TEAM SECTION */
-    .team-section {
-      padding: 80px 16px;
-      background: #fff;
-    }
-
-    .team-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .team-section h2 {
-      text-align: center;
-      color: #00796b;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .team-section .sub {
-      text-align: center;
-      color: #41645f;
-      max-width: 860px;
-      margin: 0 auto 4rem;
-      font-weight: 500;
-      line-height: 1.5;
-      font-size: 1.2rem;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .team-member {
-      background: #f7fdfc;
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .team-member:hover {
-      transform: translateY(-5px);
-    }
-
-    .team-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: #009688;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 8px 20px rgba(0, 150, 136, 0.2);
-    }
-
-    .team-name {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #00594f;
-      margin-bottom: 0.5rem;
-    }
-
-    .team-role {
-      color: #009688;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .team-desc {
-      color: #475657;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* FOOTER - professional, launch-ready style */
+    /* FOOTER */
     .site-footer {
       background: linear-gradient(180deg,#012e2b 0%, #023835 100%);
       color: #cfeeea;
@@ -521,17 +265,9 @@
     .site-footer .footer-legal { text-align:center; color: rgba(255,255,255,0.75); padding-top: 18px; font-weight:600; }
 
     /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .site-footer .footer-inner { grid-template-columns: 1fr 1fr; }
-      .about-content { grid-template-columns: 1fr; gap: 2rem; }
-      .stats-container { grid-template-columns: repeat(2, 1fr); }
-      .values-grid { grid-template-columns: repeat(2, 1fr); }
-      .team-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
-      .hero p { font-size: 1.2rem; }
+      .error-content h1 { font-size: 4rem; }
+      .error-content h2 { font-size: 1.5rem; }
       .navbar {
         position: relative;
         padding: 0.75rem 1rem;
@@ -574,13 +310,9 @@
 
     @media (max-width: 520px) {
       .site-footer .footer-inner { grid-template-columns: 1fr; gap: 18px; }
-      .stats-container { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr; }
-      .hero { height: 80vh; }
     }
 
-    /* Accessibility and Utility */
+    /* Accessibility */
     a:focus,
     button:focus {
       outline: 2px solid #004d40;
@@ -612,34 +344,6 @@
     .contact-icon.whatsapp {
       background: #25D366;
     }
-    .email-btn {
-      display: inline-block;
-      background: #00796b;
-      color: #fff;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    .email-btn:hover {
-      background: #00594f;
-    }
-    /* MOBILE IMPROVEMENTS */
-    img, .hn-card img, .store-card img, .about-media img { max-width:100%; height:auto; display:block; }
-    .container, .section, .health-network, .order-section, .grid, .clinics-list { padding-left:16px; padding-right:16px; box-sizing:border-box; }
-    .grid, .hn-grid, .order-list, .about-grid, .clinics-list { gap:1rem; grid-gap:1rem; }
-    @media (max-width: 900px){
-      .grid, .hn-grid, .order-list, .about-grid, .clinics-list { grid-template-columns: repeat(2,1fr); }
-      .navbar nav ul { gap: .75rem; }
-    }
-    @media (max-width: 600px){
-      .grid, .hn-grid, .order-list, .about-grid, .clinics-list { grid-template-columns: 1fr; }
-      body{font-size:15px}
-      .navbar nav ul{flex-direction:column;align-items:flex-start}
-      .menu-toggle{display:block}
-      .navbar{padding:.75rem 1rem}
-      .logo{font-size:1rem}
-    }
   </style>
 </head>
 
@@ -662,106 +366,13 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Noor Fatima Healthcare Group</h1>
-        <p>Dedicated to providing compassionate, accessible healthcare services to our community, building a healthier future for everyone.</p>
-        <a href="#about-section" class="btn">Learn More</a>
-      </div>
-    </section>
-
-    <section id="about-section" class="about-section">
-      <div class="container">
-        <h2>Our Story</h2>
-        <p class="sub">Founded in 2010, Noor Fatima Healthcare Group started as a small clinic and has grown into a comprehensive network of healthcare services. Our journey is driven by a passion for improving lives and a dedication to serving underserved communities.</p>
-        <div class="about-content">
-          <div class="about-text">
-            <h3>Our Mission</h3>
-            <p>At Noor Fatima Healthcare Group, our mission is to deliver high-quality, community-focused healthcare that is accessible to all. We believe in combining modern medical practices with a personal touch, ensuring every patient feels valued and cared for.</p>
-            <h3>Our Vision</h3>
-            <p>To be the leading healthcare provider in our region, known for excellence in patient care, innovation in services, and unwavering commitment to community well-being.</p>
-            <h3>Why Choose Us?</h3>
-            <p>We prioritize patient safety, affordability, and convenience. From doorstep medicine delivery to expert consultations, we make healthcare simple and stress-free.</p>
-          </div>
-          <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare professionals in action">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="values-section">
-      <div class="container">
-        <h2>Our Core Values</h2>
-        <p class="sub">These principles guide everything we do, ensuring we provide the best care possible to our community.</p>
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
-            <h3 class="value-title">Compassion</h3>
-            <p class="value-desc">We treat every patient with empathy and respect, understanding that healthcare is about people first.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
-            <h3 class="value-title">Quality</h3>
-            <p class="value-desc">Delivering the highest standards of medical care with attention to detail and safety.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
-            <h3 class="value-title">Community</h3>
-            <p class="value-desc">Building stronger communities through accessible healthcare and outreach programs.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></div>
-            <h3 class="value-title">Accessibility</h3>
-            <p class="value-desc">Making healthcare convenient with online ordering, home delivery, and easy clinic access.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-lock" aria-hidden="true"></i></div>
-            <h3 class="value-title">Safety</h3>
-            <p class="value-desc">Protecting patient wellbeing through strict hygiene, secure processes, and trusted care pathways.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
-            <h3 class="value-title">Innovation</h3>
-            <p class="value-desc">Continuously improving services with new technology, faster delivery, and smarter patient support.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="team-section">
-      <div class="container">
-        <h2>Meet Our Team</h2>
-        <p class="sub">Our experienced doctors, pharmacists, and support staff are committed to providing the best care possible.</p>
-        <div class="team-grid">
-          <div class="team-member">
-            <div class="team-photo"><i class="fas fa-user-md" aria-hidden="true"></i></div>
-            <h3 class="team-name">Dr. XYZ</h3>
-            <p class="team-role">Chief Medical Officer</p>
-            <p class="team-desc">With over 15 years of experience in family medicine, Dr. XYZ leads our medical team with dedication and expertise.</p>
-          </div>
-          <div class="team-member">
-            <div class="team-photo"><i class="fas fa-pills" aria-hidden="true"></i></div>
-            <h3 class="team-name">Mr. Omar Ahad Mir</h3>
-            <p class="team-role">Head Pharmacist</p>
-            <p class="team-desc">XXXXXXXXXXXXXXXX.</p>
-          </div>
-          <div class="team-member">
-            <div class="team-photo"><i class="fas fa-heartbeat" aria-hidden="true"></i></div>
-            <h3 class="team-name">Ms. XYZ</h3>
-            <p class="team-role">Patient Care Coordinator</p>
-            <p class="team-desc">XXXXXXXXXXXXXXXXXXXXXXXXX</p>
-          </div>
-          <div class="team-member">
-            <div class="team-photo"><i class="fas fa-stethoscope" aria-hidden="true"></i></div>
-            <h3 class="team-name">Dr. Qaisar War</h3>
-            <p class="team-role">Senior Physician</p>
-            <p class="team-desc">XXXXXXXXXXXXXXXXXXXXXXXXX</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <main id="main-content" class="error-section">
+    <div class="error-content">
+      <h1>404</h1>
+      <h2>Page Not Found</h2>
+      <p>Sorry, the page you are looking for does not exist or has been moved. Please check the URL or go back to the homepage.</p>
+      <a href="index.html" class="btn">Go Home</a>
+    </div>
   </main>
 
   <footer class="site-footer" aria-labelledby="footer-heading">
@@ -769,13 +380,13 @@
     <div class="footer-inner">
       <div class="brand">
         <a href="index.html" class="logo-footer">Noor Fatima Healthcare Group</a>
-        <p class="tagline">Compassionate, community-first healthcare with clinics, pharmacies, diagnostics, and doorstep delivery.</p>
+        <p class="tagline">Compassionate, community-first healthcare with clinics, pharmacies, and doorstep delivery.</p>
         <div class="social-icons" aria-label="Social media links" style="margin-top:14px">
           <a href="javascript:void(0)" onclick="alert('Our Facebook page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="javascript:void(0)" onclick="alert('Our Instagram page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/noorfatimahealthcaregroup/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
           <a href="javascript:void(0)" onclick="alert('Our Twitter page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
           <a href="javascript:void(0)" onclick="alert('Our LinkedIn page is coming soon. For updates, contact us at info@nfhg.com or +91 70518 99758.')" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-          <a href="https://youtube.com/@noorfatimahealthcaregroup?si=ordo8-Q2yGr6rbJu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://youtube.com/@noorfatimahealthcaregroup?si=rzRmfsHa4p1ULpsi" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -798,7 +409,7 @@
         <h4 id="contact-footer">Get in touch</h4>
         <p class="address">Corporate Office: Chanduna Deh Nowabad, Ganderbal - 191131, Jammu &amp; Kashmir, India</p>
         <p><span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span><a href="tel:+917051899758">+91 70518 99758</a></p>
-        <p><span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span><a href="mailto:info@nfhg.com">info@nfhg.com</a></p>
+        <p><span class="contact-icon whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></span><a href="https://wa.me/917051899758">+91 70518 99758</a></p>
       </div>
     </div>
 
@@ -839,14 +450,6 @@
         }
       });
     })();
-
-    // Smooth scrolling for hero button
-    document.querySelector('.hero .btn').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector('#about-section').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Stats count-up animation
   </script>
 </body>
 
